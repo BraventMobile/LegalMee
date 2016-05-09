@@ -1,0 +1,12 @@
+Droid/obj/
+Droid/bin/
+LegalMee.Models/bin/
+LegalMee.Models/obj/
+LegalMee.Services/bin/
+LegalMee.Services/obj/
+LegalMee/bin/
+LegalMee/obj/
+iOS/obj/
+packages/
+*.mdb
+*.dll
