@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LegalMee.FaqsView"
+	BackgroundColor="{DynamicResource WhiteColor}">
+	<ContentPage.Content>
+	<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <!--Numero de resultados-->
+      <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal" Grid.Row="0" Padding="16,4">
+        <Label Text="{Binding QuestionListCount}" TextColor="#909EA8"/>
+        <Label Text=" resultados" TextColor="#909EA8"/>
+      </StackLayout>
+      <!--Listado de resultados-->  
+      <ListView Grid.Row="1" 
+        	   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding QuestionsList}" 
+               HasUnevenRows="True"
+               SeparatorColor="Transparent"
+               SeparatorVisibility="None">
+          
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                    <StackLayout Orientation="Vertical" HeightRequest="90" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="16,4">
+                     
+                      <Label Text="{Binding Title}" TextColor="{DynamicResource GenericTextColor}" VerticalOptions="Center" HorizontalOptions="FillAndExpand" XAlign="Start" FontSize="18"/>
+                    </StackLayout>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+          
+        </ListView>
+      
+      <ContentView Grid.Row="0" Grid.RowSpan="2"  BackgroundColor="White" VerticalOptions="FillAndExpand" IsVisible="{Binding IsBusy}" HorizontalOptions="FillAndExpand">
+          
+        <ActivityIndicator IsRunning="True"
+                      VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" />
+      </ContentView>
+      
+      </Grid>
+	</ContentPage.Content>
+</ContentPage>

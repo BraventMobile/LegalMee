@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LegalMee.App">
+	<Application.Resources>
+	<ResourceDictionary>
+		<Color x:Key="LegalitasRedColor">#cc0033</Color>
+		<Color x:Key="GenericTextColor">#000000</Color>
+		<Color x:Key="WhiteColor">#ffffff</Color>
+	</ResourceDictionary>
+	</Application.Resources>
+</Application>
